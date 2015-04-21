@@ -250,7 +250,7 @@ function _redweb_create_articles() {
 function _redweb_create_drush_articles() {
   $count = variable_get('redweb_custom_articles', 0);
   if ($count) {
-    for ($i = 1; $i < $count; $i++) {
+    for ($i = 1; $i <= $count; $i++) {
       $node = new stdClass();
       $node->title = t('This article is from drush @i', array('@i' => $i));
       $node->type = 'article';
