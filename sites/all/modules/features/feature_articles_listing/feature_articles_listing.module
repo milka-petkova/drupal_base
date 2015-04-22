@@ -4,4 +4,4 @@
  * Code for the Articles listing feature.
  */
 
-include_once 'articles_listing.features.inc';
+include_once 'feature_articles_listing.features.inc';
