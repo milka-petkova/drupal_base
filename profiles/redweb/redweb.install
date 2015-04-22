@@ -181,10 +181,32 @@ function redweb_update_7001() {
     'menu_name' => 'main-menu',
     'description' => '',
     'weight' => 3,
+    'expanded' => 1,
   );
+
   // Adding certain content-type defaults.
   node_object_prepare($node);
   node_save($node);
+  $random = rand(2, 5);
+  for ($i = 1; $i <= $random; $i++) {
+    $sub_node = new stdClass();
+    $sub_node->title = t('Article on update 7001') . $i;
+    $sub_node->type = 'article';
+    // Use one home page for all languages.
+    $sub_node->language = LANGUAGE_NONE;
+    $sub_nodee->body[LANGUAGE_NONE][] = array('format' => 'filtered_html', 'value' => 'some body content');
+    $sub_node->menu = array(
+      'menu_name' => 'main-menu',
+      'enabled' => 1,
+      'link_title' => 'Sub menu of article on update 7001 ' . $i,
+      'menu_name' => 'main-menu',
+      'description' => '',
+      'weight' => 3,
+      'plid' => $node->menu['mlid'],
+    );
+    node_object_prepare($sub_node);
+    node_save($sub_node);
+  }
 }
 */
 /**

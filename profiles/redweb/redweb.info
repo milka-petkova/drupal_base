@@ -28,6 +28,9 @@ dependencies[] = ctools
 dependencies[] = views
 dependencies[] = views_ui
 dependencies[] = features
+dependencies[] = jquerymenu
+dependencies[] = strongarm
 
 ;Features
-dependencies[] = articles_listing
+dependencies[] = feature_articles_listing
+dependencies[] = festure_strongarm
