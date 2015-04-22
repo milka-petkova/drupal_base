@@ -161,14 +161,16 @@ function redweb_install() {
     variable_set('redweb_custom_articles', $custom_article_count);
   }
   // Set main menu to use jquery menus.
-  drupal_write_record('jquerymenus', array('menu_name' => 'main-menu'));
+  $jquary_active_menu = array(
+    'menu_name' => 'main-menu',
+  );
+  drupal_write_record('jquerymenus', $jquary_active_menu);
 }
 
 /**
  * Implements hook_update_N().
  * Create article with title "Article on update 7001" and set it in main-menu
- */
-/*
+ *//*
 function redweb_update_7001() {
   $node = new stdClass();
   $node->title = t('Article on update 7001');
@@ -192,11 +194,11 @@ function redweb_update_7001() {
   $random = rand(2, 5);
   for ($i = 1; $i <= $random; $i++) {
     $sub_node = new stdClass();
-    $sub_node->title = t('Article on update 7001') . $i;
+    $sub_node->title = t('Article on update 7001 @i', array('@i' => $i);
     $sub_node->type = 'article';
     // Use one home page for all languages.
     $sub_node->language = LANGUAGE_NONE;
-    $sub_nodee->body[LANGUAGE_NONE][] = array('format' => 'filtered_html', 'value' => 'some body content');
+    $sub_node->body[LANGUAGE_NONE][] = array('format' => 'filtered_html', 'value' => 'some body content');
     $sub_node->menu = array(
       'menu_name' => 'main-menu',
       'enabled' => 1,
