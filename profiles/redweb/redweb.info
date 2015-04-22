@@ -30,7 +30,9 @@ dependencies[] = views_ui
 dependencies[] = features
 dependencies[] = jquerymenu
 dependencies[] = strongarm
+dependencies[] = fe_block
 
 ;Features
 dependencies[] = feature_articles_listing
-dependencies[] = festure_strongarm
+dependencies[] = feature_strongarm
+dependencies[] = feature_blocks

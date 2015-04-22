@@ -1,0 +1,10 @@
+name = Blocks
+description = Export blocks and its related
+core = 7.x
+package = Configuration
+version = 7.x-1.0
+project = feature_blocks
+dependencies[] = fe_block
+dependencies[] = jquerymenu
+features[fe_block_settings][] = jquerymenu-1
+features[features_api][] = api:2
