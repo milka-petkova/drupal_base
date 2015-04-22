@@ -160,6 +160,8 @@ function redweb_install() {
     $custom_article_count = drush_get_option('custom-article-count', "0");
     variable_set('redweb_custom_articles', $custom_article_count);
   }
+  // Set main menu to use jquery menus.
+  drupal_write_record('jquerymenus', array('menu_name' => 'main-menu'));
 }
 
 /**

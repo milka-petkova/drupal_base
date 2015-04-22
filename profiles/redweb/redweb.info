@@ -31,6 +31,7 @@ dependencies[] = features
 dependencies[] = jquerymenu
 dependencies[] = strongarm
 dependencies[] = fe_block
+dependencies[] = features_override
 
 ;Features
 dependencies[] = feature_articles_listing
